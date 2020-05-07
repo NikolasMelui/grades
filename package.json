@@ -1,7 +1,27 @@
 {
   "name": "junost",
-  "version": "1.2.0",
+  "version": "1.3.0",
+  "private": true,
   "description": "Junost project - objective grades for the development of digital professionals, proposed and developed by the professional community. Made by ANMEDIO",
+  "author": {
+    "name": "Artyom Ivanov",
+    "url": "https://anmedio.ru"
+  },
+  "contributors": [
+    {
+      "name": "nikolasmelui",
+      "email": "slak@samaradom.ru",
+      "url": "https://nikolasmelui.beer4.ru/"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "junost",
+    "grades",
+    "anmedio",
+    "digital"
+  ],
   "main": "gulpfile.js",
   "scripts": {
     "gulp:start": "cross-env NODE_ENV=development gulp",
@@ -17,27 +37,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/anmedio/grades.git"
+    "url": "git+https://git@gitlab.com/anmedio/junost.git"
   },
-  "keywords": [
-    "grades",
-    "digital",
-    "junost",
-    "anmedio"
-  ],
-  "author": "Artyom Ivanov",
-  "contributors": [
-    {
-      "name": "nikolasmelui",
-      "email": "slak@samaradom.ru",
-      "url": "https://nikolasmelui.beer4.ru/"
-    }
-  ],
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/anmedio/grades/issues"
+    "url": "https://github.com/anmedio/junost/issues"
   },
-  "homepage": "https://gitlab.com/anmedio/grades#readme",
+  "homepage": "https://gitlab.com/anmedio/junost#readme",
+  "engines": {
+    "node": ">=12.6.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.4.0",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
