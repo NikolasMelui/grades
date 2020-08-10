@@ -1,7 +1,5 @@
-node_modules/*
-public/*
-build/*
-config/*
-view raw
+/.git
+/.vscode
+node_modules
+docs
 gulpfile.js
-src/react/components/form/data.js

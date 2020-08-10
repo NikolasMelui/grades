@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 
 // Content
 import grades from '~/grades';
+import hintsOptions from '~/hints';
 
 // Components
 import Grades from '~/pages/grades';
@@ -16,20 +17,20 @@ const components = [
   {
     component: <Grades data={grades} />,
     target: document.getElementById('grades'),
-  }
+  },
 ];
 
 $(() => {
-  components.forEach(item => {
+  components.forEach((item) => {
     if (item.target) render(item.component, item.target);
   });
 });
 
 $('.about').click(() => {
-	$.magnificPopup.open({
+  $.magnificPopup.open({
     items: {
       src: '#popup',
-      type: 'inline'
+      type: 'inline',
     },
     removalDelay: 250,
     callbacks: {
@@ -44,4 +45,10 @@ $('.about').click(() => {
       },
     },
   });
-})
+});
+
+// Hints
+$('.help').click(() => {
+  // eslint-disable-next-line
+  introJs().setOptions(hintsOptions).start();
+});
