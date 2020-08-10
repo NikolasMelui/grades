@@ -21,7 +21,7 @@ const components = [
 ];
 
 $(() => {
-  components.forEach(item => {
+  components.forEach((item) => {
     if (item.target) render(item.component, item.target);
   });
 });
@@ -50,7 +50,5 @@ $('.about').click(() => {
 // Hints
 $('.help').click(() => {
   // eslint-disable-next-line
-  introJs()
-    .setOptions(hintsOptions)
-    .start();
+  introJs().setOptions(hintsOptions).start();
 });
