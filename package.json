@@ -106,7 +106,7 @@
   },
   "eslint.packageManager": "npm",
   "lint-staged": {
-    "*": [
+    "*.(js|jsx)": [
       "npm run eslint",
       "npm run prettier"
     ]
