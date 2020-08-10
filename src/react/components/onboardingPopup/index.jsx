@@ -4,7 +4,7 @@ const OnboardingPopup = () => {
   localStorage.setItem('onboarding', 'true');
 
   return (
-    <React.Fragment>
+    <>
       <button title="Close (Esc)" type="button" className="mfp-close">
         ×
       </button>
@@ -84,7 +84,7 @@ const OnboardingPopup = () => {
         <a href="mailto:opensource@anmedio.ru">opensource@anmedio.ru</a>. Всегда
         рады познакомиться со сторонниками и противниками этой затеи 😎
       </p>
-    </React.Fragment>
+    </>
   );
 };
 

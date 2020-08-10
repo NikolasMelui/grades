@@ -1,11 +1,11 @@
 import React from 'react';
 
-const SkillPopup = d => {
+const SkillPopup = (d) => {
   const { data, onChange } = d;
   const CV = JSON.parse(localStorage.getItem('CV'));
 
   const mappedLinks = data.links
-    ? data.links.map(link => (
+    ? data.links.map((link) => (
         <li key={`${data.tag}_${link.name}`}>
           <a
             className="tag"
@@ -20,10 +20,10 @@ const SkillPopup = d => {
     : null;
 
   const links = (
-    <React.Fragment>
+    <>
       <h4>Ссылки на материалы</h4>
       <ul>{mappedLinks}</ul>
-    </React.Fragment>
+    </>
   );
 
   // Set CV based on LocalStorage
@@ -43,7 +43,7 @@ const SkillPopup = d => {
   if (CV && CV.items.includes(data.name)) btnClasses.push('btn-know--active');
 
   return (
-    <React.Fragment>
+    <>
       <button title="Close (Esc)" type="button" className="mfp-close">
         ×
       </button>
@@ -59,7 +59,7 @@ const SkillPopup = d => {
       </h2>
       <p>{data.text ? data.text : null}</p>
       {links}
-    </React.Fragment>
+    </>
   );
 };
 

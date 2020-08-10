@@ -129,12 +129,12 @@ class Grades extends Component {
   prepareRows() {
     const { data, opened } = this.state;
 
-    const rows = data.map(row => {
+    const rows = data.map((row) => {
       const classes = ['grade-section'];
       if (opened.indexOf(row.name) >= 0) classes.push('is-open');
       if (row.soon) classes.push('is-soon');
 
-      const levels = row.levels.map(level => {
+      const levels = row.levels.map((level) => {
         // If empty - show "soon"
         if (!level.skills.length) {
           return (
@@ -156,7 +156,7 @@ class Grades extends Component {
 
         const CV = JSON.parse(localStorage.getItem('CV'));
         // let counterKnownSkills = 0;
-        const skills = level.skills.map(skill => {
+        const skills = level.skills.map((skill) => {
           const skillClasses = ['grade__item'];
           if (CV && CV.items.includes(skill.name)) {
             skillClasses.push('grade__item--active');
@@ -249,7 +249,7 @@ class Grades extends Component {
               className="title grade-section__title"
               onClick={() => this.toggleOpened(row.name)}
             >
-              <span></span>
+              <span> </span>
               {row.name}
             </button>
             <div className="grade-section__slider">{levels}</div>
@@ -263,10 +263,10 @@ class Grades extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <>
         {this.prepareRows()}
         <div className="grade-popup" id="popup" />
-      </React.Fragment>
+      </>
     );
   }
 }
